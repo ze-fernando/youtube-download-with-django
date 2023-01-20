@@ -1,0 +1,115 @@
+body{
+    background-color: #2b3136;   
+    overflow: hidden;
+}
+label{
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 0px;
+    color: #63c700;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    color: #63c700;
+    font-size: 80px;
+    margin-bottom: 1em;
+    font-family: sans-serif;
+}
+.url{
+    padding: 0.63em 4em 0.63em 0.63em;
+    width: 40em;
+    border: none;
+    border-radius: 12px;
+    border-bottom: 2px solid #63c700;
+    background-color: #2b3136;
+    outline: none;
+    color: #f0f8ff;
+    margin-bottom: 1em;
+}
+.url::placeholder{
+    color: #cbd1d6;
+}
+.video, .audio{
+    display: flex;
+    margin: 1em;
+    padding: 0.5em 15em;
+    border-radius: 12px;
+    outline: none;
+    background-color: transparent;
+    color: #63c700;
+    border-color: #63c700;
+    cursor: pointer;
+    font-size: large;
+}
+.video:hover, .audio:hover{
+    background-color: #63c700;
+    color: #2b3136;
+}
+#animação{
+    display: none;
+    animation: carregando 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-top-color: #63c700;
+    height: 50px;
+    width: 50px;
+    margin-top: 0px;
+    border-radius: 50px;
+}
+@keyframes carregando{
+    to {
+        transform: rotate(1turn);
+      }
+}
+
+@media (max-width: 735px) {
+    h1{
+        color: #63c700;
+        font-size: 40px;
+        margin-bottom: 1em;
+        font-family: sans-serif;
+    }
+    label{
+        font-size: 15px;
+    }
+    .url{
+        padding: 0.63em 4em 0.63em 0.63em;
+        width: 20em;
+        border: none;
+        border-radius: 12px;
+        border-bottom: 2px solid #63c700;
+        background-color: #2b3136;
+        outline: none;
+        color: #f0f8ff;
+        margin-bottom: 1em;
+    }
+    .url::placeholder{
+        color: #cbd1d6;
+    }
+    .video, .audio{
+        margin: 1em;
+        padding: 0.25em 7.5em;
+        border-radius: 12px;
+        outline: none;
+        background-color: transparent;
+        color: #63c700;
+        border-color: #63c700;
+        cursor: pointer;
+        font-size: large;
+    }
+    .video:hover, .audio:hover{
+        background-color: #63c700;
+        color: #2b3136;
+    }
+}

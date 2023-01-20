@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <head>
+    <meta charset="utf-8" />
+    <title>Youtube Videos Download</title>
+    <script src="{% static 'js/script.js' %}"></script>
+  </head>
+  <body>
+    <div class='container'>
+      <div id="animação"></div>
+      <h1>Download Youtube</h1>
+        <form action='' method='POST' class='input'>
+          {% csrf_token %}
+          <input type='text' class='url' id="link" name="link" placeholder='Insira a url' maxlength="400"/>
+          <input type='submit' id="mp4" class='video' name="download" value='Video' onclick="animar()"/>
+          <input type='submit' id="mp3" class='audio' name="download" value='Áudio' onclick="animar()"/>
+        </form><br>
+        <label>Desenvolvido por José Fernando</label>
+    </div>
+  </body>
+</html>
